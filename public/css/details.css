@@ -1,0 +1,73 @@
+article{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+  max-width: 100%; /* Pour éviter que l'article ne dépasse de l'écran */
+}
+
+#details {
+  margin: 1em;
+  padding: 1em;
+}
+
+#details .articles {
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+
+#details article {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 0.5rem;
+}
+
+#details article img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+#details article div {
+  padding: 2rem;
+  text-align: start;
+}
+
+#details article h2 {
+  margin-bottom: 1rem;
+}
+
+#details article a {
+  margin-top: 1rem;
+}
+
+.navbuttons{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:center;
+}
+
+.prevnext{
+  margin: 1em;
+  padding: 1em;
+}
+
+.imagecontainer {
+  width: 300px; /* Largeur fixe */
+  min-width: 200px; /* Largeur minimale pour éviter que ce soit trop petit */
+  height: 300px; /* Hauteur fixe */
+  overflow: hidden; /* Cache ce qui dépasse */
+}
+
+div p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.status { display: inline-flex; align-items: center; gap: .35rem; font-weight: 600; }
+.status svg { display: block; width: 1em; height: 1em; flex-shrink: 0; }

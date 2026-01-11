@@ -1,0 +1,45 @@
+<%- include("partials/header", { cssFile: "/css/details.css" }) %>
+<main>
+  <section id="details">
+    <article>
+      <div class="imagecontainer">
+        <img src="/images/coffees/<%=selectedcoffee.reference%>.png" alt="<%=selectedcoffee.name%>" />
+      </div>
+      <div>
+        <h2><%=selectedcoffee.name%></h2>
+        <p>Origine : <%= selectedcoffee.flagEmoji %> <%= selectedcoffee.country_name %></p>
+        <p><%=selectedcoffee.price_per_kg%> €/kg</p>
+        <p>Catégorie(s) :
+          <%= selectedcoffee.categories.join(', ') %>
+        </p>
+        <p style="font-style: italic;">
+          <%=selectedcoffee.description%>
+        </p>
+        <p>
+          <% if (selectedcoffee.available) { %>
+          <span class="status available">
+            <!-- SVG check vert -->
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.285 6.708a1 1 0 0 0-1.428-1.416L9 15.15l-3.857-3.857A1 1 0 0 0 3.715 12.71l4.142 4.142a1 1 0 0 0 1.414 0L20.285 6.708z" fill="#16a34a" />
+            </svg>
+            Disponible
+          </span>
+          <% } else { %>
+          <span class="status unavailable">
+            <!-- SVG croix rouge -->
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.364 5.636a1 1 0 0 0-1.414 0L12 10.586 7.05 5.636A1 1 0 1 0 5.636 7.05L10.586 12l-4.95 4.95a1 1 0 1 0 1.414 1.414L12 13.414l4.95 4.95a1 1 0 0 0 1.414-1.414L13.414 12l4.95-4.95a1 1 0 0 0 0-1.414z" fill="#ef4444" />
+            </svg>
+            Indisponible
+          </span>
+          <% } %>
+        </p>
+      </div>
+    </article>
+    <div class="navbuttons">
+      <a class="button prevnext" href="/coffee/<%=selectedcoffee.id-1%>">Précédent</a>
+      <a class="button prevnext" href="/coffee/<%=selectedcoffee.id+1%>">Suivant</a>
+    </div>
+  </section>
+</main>
+<%- include("partials/footer") %>

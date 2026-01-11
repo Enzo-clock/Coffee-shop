@@ -1,0 +1,5 @@
+Pays : nom
+VIENT DE, 11 Café, 0N Pays
+Café: nom, référence, description, prix au kilo, disponibilité, image
+EST DE TYPE, 1N Café, 0N Caractéristique
+Caractéristique : nom

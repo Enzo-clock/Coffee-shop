@@ -1,0 +1,175 @@
+<%- include("partials/header", { cssFile: "/css/home.css" }) %>
+
+<main>
+  <section id="about">
+    <div>
+      <h1>Votre spécialiste Haucloquois du café</h1>
+      <span class="intro">
+        <img src="/images/about.jpg" alt="Selection de nos meilleurs cafés oCoffee">
+        <p>Notre entreprise oCoffee est un détaillant de café et de produits associés à la consommation du café basé dans la ville de Hauts-de-Cloques. Nous importons nos produits directement des producteurs, et nous les sélectionnons selon des critères exigeants de qualité. oCoffee est reconnu à l’échelle départementale.</p>
+      </span>
+    </div>
+    <div id="map"></div>
+    <button class="button" id="whoarewe">
+      Qui sommes-nous ?
+    </button>
+    <p class="about1">Jean et Jacques Pepper, deux frères passionnés par le café, sont les fondateurs de notre boutique. Avec une expertise approfondie et un amour profond pour cette délicieuse boisson, ils ont créé un espace où le café est célébré comme une expérience raffinée et inspirante.</p>
+
+    <button class="button" id="ambiance">
+      Ambiance de la boutique
+    </button>
+    <p class="about2">Bienvenue dans notre boutique, où règne une ambiance chaleureuse et accueillante qui éveille tous vos sens. Dès que vous franchissez la porte, vous êtes enveloppé d'une douce symphonie d'arômes envoûtants de café fraîchement moulu.
+
+      L'atmosphère est empreinte d'une lueur chaleureuse, avec des lumières tamisées qui créent des jeux d'ombres et de lumières apaisants. Les murs sont ornés d'éléments rustiques, de panneaux en bois et de photographies captivantes de plantations de café, évoquant l'origine de ces délices aromatiques.
+
+      Les étagères en bois exposent fièrement une variété de grains de café provenant des quatre coins du monde, chacun racontant une histoire unique de terroir et de culture. Les sacs de café empilés dévoilent une palette de couleurs allant des tons chocolat aux nuances ambrées, invitant à l'exploration sensorielle.
+
+      Le cliquetis des tasses et des cuillères résonne joyeusement dans l'air et le son réconfortant des machines à expresso en action crée une symphonie orchestrée avec soin, soulignant l'expertise et l'art qui se cachent derrière chaque tasse de café servie.
+
+      Les coins douillets sont parsemés de fauteuils confortables et de canapés moelleux, invitant nos clients à s'installer et à se perdre dans un bon livre, ou simplement à profiter d'une conversation entre amis. L'odeur enivrante du café fraîchement infusé flotte dans l'air, créant une ambiance propice à la détente et à la contemplation.
+
+      Le personnel attentionné et passionné est toujours prêt à partager ses connaissances et ses recommandations, créant un lien chaleureux entre les amateurs de café et les artisans qui le préparent avec soin. Chaque visite est une expérience personnelle, où le client est accueilli comme un ami de longue date.
+
+      Dans notre détaillant de café, l'ambiance chaleureuse vous invite à ralentir le rythme trépidant de la vie quotidienne et à savourer l'instant présent. Que vous soyez un connaisseur de café ou un novice curieux, nous sommes là pour vous guider dans un voyage sensoriel inoubliable, où chaque gorgée révèle un monde de saveurs riches et complexes.</p>
+
+    <button class="button" id="savoir">
+      Notre savoir faire
+    </button>
+    <p class="about3">Jean et Jacques Pepper, deux frères passionnés par l'univers du café, ont toujours rêvé de créer leur propre boutique de café haut de gamme. L'occasion de concrétiser ce rêve est arrivée lors d'un voyage inoubliable en Colombie, un pays célèbre pour ses plantations de café renommées dans le monde entier.
+
+      Pendant leur séjour en Colombie, Jean et Jacques ont eu la chance de visiter une plantation de café pittoresque, nichée au cœur des montagnes verdoyantes. Ils ont été immédiatement captivés par l'atmosphère envoûtante et l'engagement des agriculteurs locaux à cultiver les meilleurs grains de café.
+
+      Au cours de cette visite, ils ont eu l'occasion de rencontrer des producteurs de café passionnés qui leur ont partagé leurs connaissances et leur amour pour le processus de culture, de récolte et de transformation du café. Jean et Jacques ont été fascinés par l'attention méticuleuse portée à chaque étape de la production, ainsi que par la diversité des saveurs et des arômes uniques que les différents terroirs colombiens offraient.
+
+      C'est à ce moment-là que l'étincelle de l'inspiration a embrasé leur esprit. Ils ont réalisé qu'ils voulaient partager cette passion pour le café de qualité avec le reste du monde. Leur vision était de créer un lieu où les amateurs de café pourraient découvrir et déguster des variétés de café exceptionnelles, tout en apprenant sur leur origine et leur processus de production.
+
+      De retour chez eux, Jean et Jacques ont mis en pratique leurs idées et ont commencé à planifier l'ouverture de leur boutique de café. Ils ont parcouru les fournisseurs, sélectionné avec soin les meilleurs grains de café issus de plantations durables et équitables, et ont créé un espace accueillant et chaleureux pour accueillir les amateurs de café.
+
+      Leur boutique de café était bien plus qu'un simple commerce. C'était un lieu où les clients pouvaient vivre une expérience sensorielle unique, en explorant les différentes origines, torréfactions et méthodes d'infusion. Jean et Jacques se sont également engagés à soutenir les communautés de producteurs de café en travaillant directement avec eux et en veillant à ce que chaque tasse de café servie contribue à un commerce équitable et durable.
+
+      Aujourd'hui, la boutique de café des frères Pepper est devenue une référence pour les amateurs de café de la région. Leur passion, leur connaissance approfondie et leur engagement envers la qualité se reflètent dans chaque tasse servie. Jean et Jacques sont fiers d'avoir transformé leur voyage en Colombie en une aventure entrepreneuriale qui a permis à tant de personnes de découvrir et d'apprécier le véritable plaisir du café.</p>
+
+    <div>
+      <a class="button" href="/catalog">Découvrir notre catalogue</a>
+    </div>
+  </section>
+
+  <section id="latest-products">
+    <h2>Nouveautés</h2>
+    <ul>
+      <% new3coffeeList.forEach(coffee=> { %>
+      <li>
+        <article>
+          <img src="/images/coffees/<%=coffee.reference%>.png" alt="<%=coffee.name%>" />
+          <div>
+            <h3><%=coffee.name%></h3>
+            <p><%= coffee.getFormattedPrice()%></p>
+            <a class="button-outline" href="/coffee/<%=coffee.id%>">Voir le détail</a>
+          </div>
+        </article>
+      </li>
+      <% }) %>
+    </ul>
+  </section>
+
+</main>
+<script>
+  function toggleSection(sectionClass) {
+    const section = document.querySelector(sectionClass);
+    if (section.style.display === 'block') {
+      section.style.display = 'none';
+    } else {
+      section.style.display = 'block';
+    }
+  }
+
+  document.getElementById("whoarewe").addEventListener("click", () => toggleSection('.about1'));
+  document.getElementById("ambiance").addEventListener("click", () => toggleSection('.about2'));
+  document.getElementById("savoir").addEventListener("click", () => toggleSection('.about3'));
+</script>
+
+<script>
+  // Coordonnées approximatives des pays producteurs
+  const countries = [{
+      name: "Italie",
+      coords: [41.8719, 12.5674]
+    },
+    {
+      name: "Colombie",
+      coords: [4.5709, -74.2973]
+    },
+    {
+      name: "Éthiopie",
+      coords: [9.145, 40.4897]
+    },
+    {
+      name: "Brésil",
+      coords: [-14.235, -51.9253]
+    },
+    {
+      name: "Guatemala",
+      coords: [15.7835, -90.2308]
+    },
+    {
+      name: "Kenya",
+      coords: [-0.0236, 37.9062]
+    },
+    {
+      name: "Indonésie",
+      coords: [-0.7893, 113.9213]
+    },
+    {
+      name: "Costa Rica",
+      coords: [9.7489, -83.7534]
+    },
+    {
+      name: "Vietnam",
+      coords: [14.0583, 108.2772]
+    },
+    {
+      name: "Tanzanie",
+      coords: [-6.3690, 34.8888]
+    },
+    {
+      name: "Jamaïque",
+      coords: [18.1096, -77.2975]
+    },
+    {
+      name: "Rwanda",
+      coords: [-1.9403, 29.8739]
+    },
+    {
+      name: "Panama",
+      coords: [8.538, -80.7821]
+    },
+    {
+      name: "Pérou",
+      coords: [-9.19, -75.0152]
+    },
+    {
+      name: "Hawaï",
+      coords: [19.8968, -155.5828]
+    },
+    {
+      name: "Nicaragua",
+      coords: [12.8654, -85.2072]
+    }
+  ];
+
+  // Initialisation de la carte dézoomée au maximum
+  const map = L.map("map").setView([20, 0], 0);
+
+  // Ajout du fond de carte OpenStreetMap
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 5,
+  }).addTo(map);
+
+  // Ajout des marqueurs
+  countries.forEach(country => {
+    L.marker(country.coords).addTo(map)
+      .bindPopup(`<strong>${country.name}</strong>`);
+  });
+</script>
+
+
+<%- include("partials/footer") %>

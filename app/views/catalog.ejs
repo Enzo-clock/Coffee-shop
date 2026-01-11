@@ -1,0 +1,49 @@
+<%- include("partials/header", { cssFile: "/css/catalog.css" }) %>
+
+<main>
+  <section id="catalog">
+    <h1>Notre catalogue</h1>
+
+    <div class="articles only-display-3-articles" id="articles-list">
+      <% coffeeList.forEach(coffee=> { %>
+      <article>
+        <img src="/images/coffees/<%=coffee.reference%>.png" alt="<%=coffee.name%>" />
+        <div>
+          <h2><%=coffee.name%></h2>
+          <p>Origine : <%= coffee.flagEmoji %> <%= coffee.country_name %></p>
+          <p><%=coffee.price_per_kg%> €/kg</p>
+          <a class="button-outline" href="/coffee/<%=coffee.id%>">Voir le détail</a>
+        </div>
+      </article>
+      <% }) %>
+    </div>
+    <button class="button" id="see-all-products-button">
+      Voir tous les produits
+    </button>
+    <button class="button" id="only-3-products-button">
+      Voir moins
+    </button>
+  </section>
+</main>
+
+<script>
+  document.getElementById("see-all-products-button").addEventListener("click", function() {
+    const showlessbutton = document.getElementById("only-3-products-button");
+    const articlesList = document.getElementById("articles-list");
+    articlesList.classList.remove("only-display-3-articles");
+    // Optionnel : masquer le bouton après clic
+    this.style.display = "none";
+    showlessbutton.style.display = "block";
+  });
+
+  document.getElementById("only-3-products-button").addEventListener("click", function() {
+    const showmorebutton = document.getElementById("see-all-products-button");
+    const articlesList = document.getElementById("articles-list");
+    articlesList.classList.add("only-display-3-articles");
+    // Optionnel : masquer le bouton après clic
+    this.style.display = "none";
+    showmorebutton.style.display = "block";
+  });
+</script>
+
+<%- include("partials/footer") %>

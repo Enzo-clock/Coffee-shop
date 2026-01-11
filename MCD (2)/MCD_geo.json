@@ -1,0 +1,25 @@
+{
+  "width": 540,
+  "height": 154,
+  "cx": [
+    [ "PAYS", 29 ],
+    [ "VIENT_DE", 118 ],
+    [ "CAFE", 229 ],
+    [ "EST_DE_TYPE", 350 ],
+    [ "CARACTERISTIQUE", 480 ]
+  ],
+  "cy": [
+    [ "PAYS", 77 ],
+    [ "VIENT_DE", 77 ],
+    [ "CAFE", 77 ],
+    [ "EST_DE_TYPE", 77 ],
+    [ "CARACTERISTIQUE", 77 ]
+  ],
+  "shift": [
+    [ "VIENT_DE,CAFE,0", 0 ],
+    [ "VIENT_DE,PAYS,0", 0 ],
+    [ "EST_DE_TYPE,CAFE,0", 0 ],
+    [ "EST_DE_TYPE,CARACTERISTIQUE,0", 0 ]
+  ],
+  "ratio": []
+}
