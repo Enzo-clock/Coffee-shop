@@ -1,6 +1,6 @@
 # O'Coffee ☕️
 
-O'Coffee est un **site web vitrine et catalogue** pour une boutique de café haut de gamme fictive, située dans la ville de Hauts-de-Cloques.
+O'Coffee est un **site web vitrine et catalogue** pour une boutique de café haut de gamme fictive.
 
 Ce projet a été réalisé dans un cadre pédagogique afin de mettre en pratique la **conception d’une application web complète**, de la modélisation des données jusqu’au rendu côté serveur, en respectant une architecture claire et maintenable.
 
@@ -39,12 +39,7 @@ La cible principale est la clientèle locale, mais également les amateurs de ca
 - Page dédiée au savoir-faire et aux valeurs de l’entreprise
 - Page catalogue listant les cafés disponibles
 - Page de détail pour chaque café
-- Affichage des informations produit :
-  - origine
-  - description
-  - caractéristiques gustatives
-  - prix au kilo
-  - disponibilité
+- Affichage des informations produit
 
 ---
 
