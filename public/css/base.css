@@ -24,3 +24,13 @@ ul {
 #menu-navbar {
   width: auto;
 }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: 3px;
+}
+
+.badge { padding: .3rem .6rem; border-radius: 1rem; font-size: .8rem; }
+.badge.available { background: green; }
+.badge.unavailable { background: crimson; }

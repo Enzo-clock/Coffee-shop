@@ -3,20 +3,20 @@
   <section id="details">
     <article>
       <div class="imagecontainer">
-        <img src="/images/coffees/<%=selectedcoffee.reference%>.png" alt="<%=selectedcoffee.name%>" />
+        <img src="/images/coffees/<%=coffee.reference%>.png" alt="<%=coffee.name%>" />
       </div>
       <div>
-        <h2><%=selectedcoffee.name%></h2>
-        <p>Origine : <%= selectedcoffee.flagEmoji %> <%= selectedcoffee.country_name %></p>
-        <p><%=selectedcoffee.price_per_kg%> €/kg</p>
+        <h2><%=coffee.name%></h2>
+        <p>Origine : <%= coffee.flagEmoji %> <%= coffee.country_name %></p>
+        <p><%=coffee.price_per_kg%> €/kg</p>
         <p>Catégorie(s) :
-          <%= selectedcoffee.categories.join(', ') %>
+          <%= coffee.categories.join(', ') %>
         </p>
         <p style="font-style: italic;">
-          <%=selectedcoffee.description%>
+          <%=coffee.description%>
         </p>
         <p>
-          <% if (selectedcoffee.available) { %>
+          <% if (coffee.available) { %>
           <span class="status available">
             <!-- SVG check vert -->
             <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" focusable="false" xmlns="http://www.w3.org/2000/svg">
@@ -37,8 +37,8 @@
       </div>
     </article>
     <div class="navbuttons">
-      <a class="button prevnext" href="/coffee/<%=selectedcoffee.id-1%>">Précédent</a>
-      <a class="button prevnext" href="/coffee/<%=selectedcoffee.id+1%>">Suivant</a>
+      <a class="button prevnext" href="/coffee/<%=coffee.id-1%>">Précédent</a>
+      <a class="button prevnext" href="/coffee/<%=coffee.id+1%>">Suivant</a>
     </div>
   </section>
 </main>

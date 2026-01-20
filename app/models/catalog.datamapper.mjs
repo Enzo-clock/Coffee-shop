@@ -12,7 +12,7 @@ const catalogDataMapper = {
    */
   getAllCoffees: async () => {
     // appeler une requête pour récupérer tous les cafés (par ordre alphabétique croissant)
-    const results = await client.query('SELECT coffee.*, country.name AS country_name FROM coffee JOIN country ON country.id = coffee.country_id ORDER BY "created_at" ASC;');
+    const results = await client.query('SELECT coffee.*, country.name AS country_name FROM coffee JOIN country ON country.id = coffee.country_id ORDER BY coffee.created_at DESC;');
     // on retourne la liste des données
     return results.rows;
   },

@@ -42,7 +42,10 @@ export class Coffee {
         return priceWithEuro;
         */
 
-        return `${this.#price_per_kg.toFixed(2).replace(".", ",")} €`;
+        return new Intl.NumberFormat("fr-FR", {
+            style: "currency",
+            currency: "EUR"
+        }).format(this.#price_per_kg);
     }
 
 }

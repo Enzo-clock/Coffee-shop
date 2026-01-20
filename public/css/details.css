@@ -6,6 +6,12 @@ article{
   max-width: 100%; /* Pour éviter que l'article ne dépasse de l'écran */
 }
 
+@media (max-width: 768px) {
+  article {
+    flex-direction: column;
+  }
+}
+
 #details {
   margin: 1em;
   padding: 1em;
@@ -18,7 +24,7 @@ article{
 
 
 #details article {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
 }
 
@@ -71,3 +77,4 @@ div p {
 
 .status { display: inline-flex; align-items: center; gap: .35rem; font-weight: 600; }
 .status svg { display: block; width: 1em; height: 1em; flex-shrink: 0; }
+

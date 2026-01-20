@@ -27,12 +27,6 @@ const detailsDataMapper = {
         // on retourne la liste des données
         return results.rows;
     },
-
-    /**
-     * get promo by id
-     * @param {number} id promo id
-     * @returns {Promise<object>} promo
-     */
 }
 
 export default detailsDataMapper;

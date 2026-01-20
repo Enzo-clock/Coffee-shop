@@ -15,8 +15,7 @@ export const mainController = {
       });
 
     } catch (error) {
-      // on pensera à logguer le vrai message d'erreur en prod ici
-      logger.error(error.message);
+      console.error(error);
       // puis on envoie une 500 générique au client
       return res.status(500).render("500");
     }

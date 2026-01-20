@@ -12,6 +12,6 @@ router.get("/", mainController.home);
 // route catalog
 router.get("/catalog", catalogController.list);
 // route details
-router.get("/coffee/:id", detailsController.coffeedetail);
+router.get("/coffee/:id", detailsController.show);
 
 export default router;

@@ -6,6 +6,11 @@ import dotenv from "dotenv";
 // on charge les variables dans process.env
 dotenv.config();
 
+import client from "./app/database.mjs";
+
+await client.connect();
+
+
 // import du routeur
 import router from "./app/router.mjs";
 
